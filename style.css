@@ -1,0 +1,610 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(216, 216, 186);
+  scroll-behavior: smooth;
+}
+
+img {
+  background-color: transparent;
+}
+
+b {
+  background-color: transparent;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  background-color: transparent;
+}
+
+#banner {
+  height: 100vh;
+  width: 100%;
+  border-bottom: solid 2px#5b642d;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  height: 50%;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  /* padding-bottom: 100px; */
+  /* border: solid #5b642d; */
+}
+
+.banner_img_wrapper {
+  height: 200px;
+  position: absolute;
+  background-color: transparent;
+  z-index: 100;
+  /* bottom: -95px; */
+  bottom: 0;
+  right: 0;
+
+  animation: fall-down 2s linear;
+}
+
+.banner_img {
+  width: 100%;
+}
+
+.rolling_container {
+  width: 50%;
+  height: 120px;
+  /* border-bottom: 4px solid #333; */
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1000;
+  overflow: visible;
+}
+
+.rolling_ball {
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  /* Link the custom keyframes animation */
+  animation: roll-across 2s linear;
+}
+
+h1 {
+  color: #5b642d;
+  margin-right: 100px;
+  font-size: 90px;
+  position: absolute;
+  left: 5%;
+  animation: appear 1s linear;
+  z-index: 100;
+  background-color: transparent;
+}
+h2 {
+  position: absolute;
+  top: 50%;
+  margin-top: 100px;
+  font-size: 90px;
+  z-index: 100;
+  background-color: transparent;
+
+  margin-right: 100px;
+  color: #5b642d;
+
+  animation: appear 1.5s linear;
+}
+
+h3 {
+  position: absolute;
+  margin-top: 200px;
+  font-size: 200px;
+  color: #5b642d;
+  top: 55%;
+  right: 25%;
+  border-bottom: solid 8px #5b642d;
+  z-index: 100;
+  background-color: transparent;
+
+  animation: appear 1.75s linear;
+}
+
+.invitation_card {
+  padding: 16px;
+  height: 100vh;
+  width: 100%;
+}
+
+.card_image {
+  height: 100%;
+}
+
+.bottom_flowers {
+  width: 100%;
+}
+
+.bottom_flowers_wrapper {
+  background-color: transparent;
+  /* z-index: 100; */
+  /* height: 100%;
+  width: 100%; */
+  position: absolute;
+  left: 0;
+  /* top: 225px; */
+  bottom: 0;
+
+  animation: grow 3s linear;
+}
+
+.top_flowers_wrapper {
+  background-color: transparent;
+  /* z-index: 10; */
+  /* height: 100%;
+  width: 100%; */
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  animation: grow-down 3s linear;
+}
+
+.top_flowers {
+  width: 100%;
+}
+
+.falling_items {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.falling-item {
+  /* position: relative; */
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+}
+
+.flower-one {
+  bottom: -800;
+  left: 0;
+}
+
+.detail_btn {
+  display: flex;
+  z-index: 1001;
+  position: absolute;
+  bottom: 0;
+  /* right: 50%;
+  left: 50%; */
+  padding: 40px;
+  font-size: 40px;
+  background: #5b642d83;
+  color: beige;
+  border-radius: 50px;
+  margin: 40px;
+  border: solid 2px#495024;
+
+  animation: appear-btn 4s linear;
+}
+
+#details {
+  display: flex;
+  padding: 72px 32px;
+  /* margin-top: 40px; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: solid 2px#5b642d;
+  height: 100%;
+
+  position: relative;
+
+  background-color: #e5a765a5;
+}
+
+.gift_btn_wrapper {
+  position: absolute;
+  height: 100%;
+  background-color: transparent;
+  right: 0;
+  top: -10px;
+}
+
+.gift_button {
+  margin: 24px;
+  display: flex;
+  position: sticky;
+  z-index: 1110;
+  background-color: #a7bee87a;
+  background-image: url(/assets/flowerbig.png);
+  padding: 24px;
+  color: #495024;
+  border-radius: 50px;
+  border: solid 2px#495024;
+  font-size: 32px;
+  font-weight: 600;
+  height: 90px;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* right: 100%; */
+  top: 10%;
+  left: 100%;
+}
+
+.gift_btn_words {
+  background-color: transparent;
+}
+
+.title {
+  padding-top: 24px;
+  font-weight: 600;
+  font-size: 100px;
+  color: #495024;
+  font-weight: bold;
+
+  background-color: transparent;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.divider-details {
+  padding: 2px;
+  /* display: ; */
+  background-color: #5b642d;
+  /* height: 400px; */
+  width: 80%;
+  border: 1px solid;
+  border-color: #5b642d;
+}
+
+.detail {
+  display: flex;
+  margin: 32px;
+  height: 100%;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 50%;
+  border-radius: 24px;
+
+  position: relative;
+}
+
+.detail-title {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #495024;
+  padding: 24px 0;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.detail-words {
+  /* padding: 40px; */
+  font-size: 50px;
+  margin-bottom: 24px;
+  /* font-weight: bold; */
+}
+
+a {
+  text-decoration: none;
+  color: #495024;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.google_img_wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  background-color: transparent;
+  padding: 24px;
+}
+
+.google_img {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: solid 4px#495024;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.google_img_link {
+  background-color: transparent;
+  width: 100%;
+}
+
+.baba {
+  position: absolute;
+  bottom: 0;
+  right: -150px;
+  background-color: transparent;
+}
+
+.baba_img {
+  width: 100%;
+}
+
+.oona {
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  background-color: transparent;
+}
+
+.oona_png {
+  width: 100%;
+}
+
+#gifts {
+  padding: 32px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gift_title {
+  font-size: 50px;
+  color: #495024;
+  font-weight: 700;
+  padding: 24px 0;
+}
+
+.gifts {
+  padding: 24px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.gift {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  margin-bottom: 32px;
+}
+
+.gift_title-section {
+  font-size: 32px;
+}
+
+@keyframes roll-across {
+  0% {
+    left: -80px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    left: 90%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes fall-down {
+  0% {
+    top: -80px;
+    /* transform: rotate(0deg); */
+  }
+  100% {
+    top: 70%;
+    /* transform: rotate(360deg); */
+  }
+}
+
+@keyframes appear {
+  0% {
+    /* height: 0; */
+    font-size: 0px;
+    /* transform: scaleY(0); */
+  }
+  50% {
+    /* height: 100%; */
+    /* font-size: 100px; */
+  }
+  100% {
+    /* height: 90%; */
+  }
+}
+@keyframes appear-btn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+
+    /* height: 100%; */
+    /* font-size: 100px; */
+  }
+  100% {
+    /* height: 90%; */
+  }
+}
+@keyframes grow {
+  0% {
+    left: -1000px;
+    top: 1000px;
+    /* height: 0; */
+    /* font-size: 0px; */
+    /* transform: scaleY(0); */
+  }
+  50% {
+    /* height: 100%; */
+    /* font-size: 100px; */
+  }
+  100% {
+    /* height: 90%; */
+  }
+}
+@keyframes grow-down {
+  0% {
+    right: -1000px;
+    bottom: -1000px;
+    /* height: 0; */
+    /* font-size: 0px; */
+    /* transform: scaleY(0); */
+  }
+  50% {
+    /* height: 100%; */
+    /* font-size: 100px; */
+  }
+  100% {
+    /* height: 90%; */
+  }
+}
+/* max-width: 480px */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-top: 45px;
+  }
+  h3 {
+    font-size: 70px;
+    margin-top: 80px;
+    margin-right: 50px;
+  }
+  .banner_img_wrapper {
+    right: 0;
+    /* bottom: -200px; */
+  }
+  .title {
+    font-size: 40px;
+  }
+  .detail-title {
+    font-size: 60px;
+  }
+  .detail {
+    /* padding: 60px; */
+    margin: 0;
+    width: 70%;
+  }
+  .oona {
+    left: -150px;
+    top: 550px;
+    width: 200px;
+    height: 200px;
+    /* bottom: 100px; */
+    /* width: 60px;
+    height: 60px; */
+  }
+}
+
+@media (max-width: 380px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    /* display: flex;*/
+    width: 100%;
+    /* text-align: center; */
+    /* margin: 40px auto; */
+  }
+  h2 {
+    /* margin: 0 auto; */
+    /* top:; */
+    text-align: center;
+
+    left: auto;
+    right: auto;
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+  h3 {
+    /* margin: 0 auto; */
+    /* top:; */
+    left: auto;
+    right: auto;
+    /* width: 100%; */
+  }
+  .detail-title {
+    font-size: 50px;
+    border-radius: 24px;
+  }
+  .detail_btn {
+    padding: 16px;
+
+    /* margin: 0 auto; */
+  }
+  .detail-words {
+    font-size: 40px;
+  }
+  .detail {
+    /* padding: 60px; */
+    margin: 0;
+    width: 95%;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .gift_button {
+    border-radius: 100%;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+  }
+  .oona {
+    left: 0;
+    top: 550px;
+    width: 200px;
+    height: 200px;
+    /* bottom: 100px; */
+    /* width: 60px;
+    height: 60px; */
+  }
+}
