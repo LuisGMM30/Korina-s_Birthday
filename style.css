@@ -221,6 +221,7 @@ h3 {
   width: 100%;
   border-bottom: solid 2px#5b642d;
   height: 100%;
+  overflow-x: hidden;
 
   position: relative;
 
